@@ -10,4 +10,4 @@ sudo killall -9 openvpn
 #sudo killall -9 haproxy
 
 ssh shell.example.com -F /etc/ssh/openvpn_tunnel_config -N &
-sudo openvpn --config /etc/openvpn/client.conf
+openvpn --config /etc/openvpn/client.conf

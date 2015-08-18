@@ -18,6 +18,8 @@ persist-key
 persist-tun
 mute-replay-warnings
 ns-cert-type server
+up /etc/openvpn/up.bash
+down /etc/openvpn/down.bash
 up-restart
 key-direction 1
 comp-lzo

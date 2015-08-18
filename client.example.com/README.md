@@ -33,6 +33,7 @@ ping-restart 10
 
 ```
 sudo apt-get install --yes netplug
+# after changing the config file be sure to `sudo service netplug stop; sudo service netplug start`
 ```
 
 ```
