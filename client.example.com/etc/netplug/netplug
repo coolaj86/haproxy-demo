@@ -8,6 +8,7 @@ action="$2"
 case "$action" in
 in)
     echo "$dev : $action : plugged in" >> /tmp/netplug.log
+    /etc/netplug/reverse-vpn.bash
     ;;
 out)
     echo "$dev : $action : unplugged" >> /tmp/netplug.log

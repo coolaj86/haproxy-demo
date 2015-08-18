@@ -38,3 +38,6 @@ sudo apt-get install --yes netplug
 ```
 ssh -F /etc/ssh/client-config -N
 ```
+
+
+`/etc/default/openvpn`

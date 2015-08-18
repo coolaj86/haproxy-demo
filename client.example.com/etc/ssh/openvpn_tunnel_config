@@ -1,6 +1,7 @@
 Host shell.example.com
   User user
   ProxyCommand openssl s_client -quiet -connect shell.example.com:443 -servername shell.example.com -verify 0
+  IdentityFile /root/.ssh/id_rsa
 #  DynamicForward 22443
 #  -CAfile /Users/aj/root-ca/certs/ca/my-root-ca.crt.pem
   # remote service on 1194 is accessible locally on 1194

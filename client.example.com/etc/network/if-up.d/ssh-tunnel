@@ -1,0 +1,2 @@
+#!/bin/bash
+ssh shell.example.com -F /etc/ssh/openvpn_tunnel_config -N &
