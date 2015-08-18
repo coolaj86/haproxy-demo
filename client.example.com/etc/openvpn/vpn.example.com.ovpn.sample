@@ -1,0 +1,59 @@
+client
+script-security 2
+dev tun
+proto tcp
+# The demo currently uses SSH local forwarding
+# but SOCKS5 could be used
+# looking to replace SSH with socat or other
+#socks-proxy 127.0.0.1 22443
+remote 127.0.0.1 1194
+#remote vpn.example.com 1194
+# encryption is not necessary when tunneling over tls (https) / ssh
+auth none
+cipher none
+#cipher AES-128-CBC
+resolv-retry infinite
+nobind
+persist-key
+persist-tun
+mute-replay-warnings
+ns-cert-type server
+up-restart
+key-direction 1
+comp-lzo
+verb 1
+mute 20
+# route-nopull
+#redirect-gateway def1
+route 0.0.0.0 192.0.0.0 net_gateway
+route 64.0.0.0 192.0.0.0 net_gateway
+route 128.0.0.0 192.0.0.0 net_gateway
+route 192.0.0.0 192.0.0.0 net_gateway
+# I don't recall why this was important,
+# but it's an arbitrary ip routed to help
+# keep the connection alive or something
+# should test to see if it's actually needed one day
+route 213.180.204.62 255.255.255.255 net_gateway
+<ca>
+-----BEGIN CERTIFICATE-----
+...
+-----END CERTIFICATE-----
+</ca>
+<cert>
+-----BEGIN CERTIFICATE-----
+...
+-----END CERTIFICATE-----
+</cert>
+<key>
+-----BEGIN PRIVATE KEY-----
+...
+-----END PRIVATE KEY-----
+</key>
+<tls-auth>
+#
+# 2048 bit OpenVPN static key
+#
+-----BEGIN OpenVPN Static key V1-----
+...
+-----END OpenVPN Static key V1-----
+</tls-auth>

@@ -1,0 +1,22 @@
+#!/bin/bash
+PATH=/usr/bin:/bin:/usr/sbin:/sbin
+export PATH
+
+dev="$1"
+action="$2"
+
+case "$action" in
+in)
+    echo "$dev : $action : plugged in" >> /tmp/netplug.log
+    ;;
+out)
+    echo "$dev : $action : unplugged" >> /tmp/netplug.log
+    ;;
+probe)
+    echo "$dev : $action : probed" >> /tmp/netplug.log
+    ;;
+*)
+    echo "$dev : $action : I feel violated" >> /tmp/netplug.log
+    exit 1
+    ;;
+esac
