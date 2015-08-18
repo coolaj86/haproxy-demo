@@ -1,0 +1,15 @@
+127.0.0.1       haproxy.example.com
+
+127.0.0.1       foo.example.com
+127.0.0.1       bar.example.com
+127.0.0.1       baz.example.com
+127.0.0.1       shell.example.com
+127.0.0.1       vnet.example.com
+127.0.0.1       pnet.example.com
+
+127.0.0.1       localhost
+::1     localhost ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
