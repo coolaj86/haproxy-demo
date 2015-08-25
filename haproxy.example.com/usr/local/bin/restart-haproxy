@@ -1,0 +1,4 @@
+#!/bin/bash
+
+#haproxy -db -f ./haproxy/haproxy.ssh.cfg
+haproxy -f /etc/haproxy/haproxy.demo.cfg -p /var/run/haproxy.demo.pid -sf $(cat /var/run/haproxy.demo.pid)
